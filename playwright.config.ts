@@ -1,7 +1,14 @@
 import { defineConfig, devices } from '@playwright/test';
+import * as dotenv from 'dotenv';
+dotenv.config();
+
 
 export default defineConfig({
+  globalSetup: require.resolve('./global/login'),
   use: {
+    
+    baseURL: process.env.saucedemo_TEST,
+    storageState: 'storageState.json',
     headless: false, 
     launchOptions: {
       slowMo: 1000, 
@@ -16,5 +23,18 @@ export default defineConfig({
         channel: 'chrome',
       },
     },
+    
+  {
+    name: 'boss',
+    testDir: './tests/boss',
+  },
+  {
+    name: 'girlfriend',
+    testDir: './tests/girlfriend',
+  }
+
   ],
+
+  
 });
+
