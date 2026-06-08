@@ -1,0 +1,7 @@
+{
+    "posts": [
+      { "id": "1", "title": "ลองเทส API ครั้งแรก", "author": "Pao" }
+    ],
+    "comments": [],
+    "profile": { "name": "tester" }
+  }
