@@ -35,6 +35,11 @@ export default defineConfig({
 
   ],
 
+  reporter: [
+    ['list'],
+    ['./utils/excel/excelReporter.ts']
+  ],
+
   
 });
 
