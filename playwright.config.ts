@@ -10,6 +10,8 @@ export default defineConfig({
     baseURL: process.env.saucedemo_TEST,
     storageState: 'storageState.json',
     headless: false, 
+    screenshot: 'on',
+    video: 'on',
     launchOptions: {
       slowMo: 1000, 
     },
